@@ -33,6 +33,21 @@
         </tr>
         </tbody>
     </table>
+    <div class ="album-form">
+        <form action="/albums" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist" name="artist" required>
+            <label for="songCount">Song Count:</label>
+            <input type="number" id="songCount" name="songCount" min="1" step="1" required>
+            <label for="length">Length (in seconds):</label>
+            <input type="number" id="length" name="length" min="1" step="1" required>
+            <label for="imageUrl">Image URL:</label>
+            <input type="url" id="imageUrl" name="imageUrl" required>
+            <button type="submit">Add Album</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>

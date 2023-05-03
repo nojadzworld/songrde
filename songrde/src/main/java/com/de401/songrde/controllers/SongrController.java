@@ -1,4 +1,4 @@
-package com.de401.songrde;
+package com.de401.songrde.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class SongrController {
- @GetMapping("/hello")
+    @GetMapping("/hello")
     public String hello() {
      return "hello";
  }
@@ -23,15 +23,15 @@ public class SongrController {
         return "splash";
     }
 
-    @GetMapping("/albums")
-    public String albums(Model m) {
-        Album[] albums = {
-             new Album("ASTROWORLD", "Travis Scott", 17, 3522,"/images/ASTROWORLD.png"),
-                new Album("The Incredible True Story", "Logic", 18,3600,"/images/The_Incredible_True_Story.png"),
-                new Album("Swimming", "Mac Miller", 13,3519,"/images/swimming.png")
-
-        };
-        m.addAttribute("albums", albums);
-        return "albums";
-    }
+//    @GetMapping("/albums")
+//    public String albums(Model m) {
+//        Album[] albums = {
+//             new Album("ASTROWORLD", "Travis Scott", 17, 3522,"/images/ASTROWORLD.png"),
+//                new Album("The Incredible True Story", "Logic", 18,3600,"/images/The_Incredible_True_Story.png"),
+//                new Album("Swimming", "Mac Miller", 13,3519,"/images/swimming.png")
+//
+//        };
+//        m.addAttribute("albums", albums);
+//        return "albums";
+//    }
 }
